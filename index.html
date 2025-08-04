@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner Chatbot</title>
+</head>
+<body>
+  <h1>Travel Planner Assistant</h1>
+  <p>Welcome! Chat with our AI assistant to plan your next adventure.</p>
+
+  <!-- IBM Watson Assistant Web Chat -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "e7d64027-c68f-450d-8ee5-fbc3cde2102a", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "37391797-486a-4707-95f1-513840f2fad8", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+            (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+            "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
